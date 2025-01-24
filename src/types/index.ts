@@ -27,9 +27,40 @@ export interface Issue {
 }
 
 export interface ConstituentIssue {
-  constituent_id: string;
+  constituentId: string;
+  issueId: string;
+  dateAdded: string;
+}
+
+export interface LinkedIssue {
   issue_id: string;
-  engagement_date: Date;
-  engagement_type: string;
-  stance: string;
+}
+
+export interface Communication {
+  communication_id: string;
+  constituent_id: string;
+  message: string;
+  linked_issues: LinkedIssue[];
+  draft_reply: string;
+  date_received: Date;
+  status: 'pending' | 'replied' | 'archived';
+}
+
+export interface AppContextType {
+  constituents: Constituent[];
+  issues: Issue[];
+  constituentIssues: ConstituentIssue[];
+  editingConstituent: Constituent | null;
+  communications: Communication[];
+  addConstituent: (constituent: Constituent) => void;
+  addIssue: (issue: Issue) => void;
+  addConstituentIssue: (constituentIssue: ConstituentIssue) => void;
+  deleteConstituent: (voterId: string) => void;
+  deleteConstituentIssue: (constituentId: string, issueId: string) => void;
+  setEditingConstituent: (constituent: Constituent | null) => void;
+  updateConstituent: (constituent: Constituent) => void;
+  resetToInitialData: () => void;
+  addCommunication: (communication: Communication) => void;
+  deleteCommunication: (communicationId: string) => void;
+  updateCommunication: (communication: Communication) => void;
 } 

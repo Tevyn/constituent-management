@@ -18,10 +18,6 @@ const Dashboard = () => {
           <StatLabel>Active Issues</StatLabel>
           <StatNumber>{context?.issues.length || 0}</StatNumber>
         </Stat>
-        <Stat>
-          <StatLabel>Issue Engagements</StatLabel>
-          <StatNumber>{context?.constituentIssues.length || 0}</StatNumber>
-        </Stat>
       </SimpleGrid>
     </Box>
   );

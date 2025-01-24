@@ -9,7 +9,7 @@ const LeftNav = () => {
         <Link as={RouterLink} to="/">Dashboard</Link>
         <Link as={RouterLink} to="/constituents">Constituents</Link>
         <Link as={RouterLink} to="/issues">Issues</Link>
-        <Link as={RouterLink} to="/communications">Communications</Link>
+        <Link as={RouterLink} to="/inbox">Inbox</Link>
         <Link as={RouterLink} to="/content-calendar">Content Calendar</Link>
       </VStack>
     </Box>

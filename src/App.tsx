@@ -5,6 +5,7 @@ import LeftNav from './components/LeftNav';
 import Dashboard from './components/Dashboard';
 import Constituents from './components/Constituents';
 import Issues from './components/Issues';
+import Inbox from './components/Inbox';
 import { AppContextProvider } from './contexts/AppContext';
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
               <Route path="/" element={<Dashboard />} />
               <Route path="/constituents" element={<Constituents />} />
               <Route path="/issues" element={<Issues />} />
+              <Route path="/inbox" element={<Inbox />} />
             </Routes>
           </Box>
         </Flex>
